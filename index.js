@@ -34,7 +34,7 @@ function myFunction() {
     for (let i = 0; i < count; i++) {
         const string1 = `<condition test="contains" flags="74">
         <category>
-          <name internal="LcRevitData_Custom">Custom</name>
+          <name internal="LcRevitData_Element">Element</name>
         </category>
         <property>
           <name internal="lcldrevit_parameter_Raceway Sequence ID_PG_IDENTITYDATA">Raceway Sequence ID</name>
