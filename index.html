@@ -1,1 +1,35 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Document</title> </head> <style> .container{ margin-top: 30px; margin-right: 20px; margin-left: 15px; padding: 23px 12px; border: 2px solid black; border-radius: 10px; font-size: 18px; font-weight: lighter; font-style: normal; } </style> <body> <h1 id="check"> <center> Tag search </center> </h1> <div> <label ></label> Tag : </label> <input id = "tag"> </div> <br> <div> <label ></label> Filename : </label> <input id = "filename"> </div> <br> <div> <label ></label> Filepath : </label> <input id = "filepath"> </div> <br> <div> <label ></label> From + To : </label> <input id = "from"> </div> <br> <div> <button id="search"> Run </button> </div> <textarea class="container" id="myInput"></textarea><br /> <button onclick="myFunction()">Copy text</button> <script src = "index.js"> </script> </body> </html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .container {
+    margin-top: 30px;
+    margin-right: 20px;
+    margin-left: 15px;
+    padding: 23px 12px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: lighter;
+    font-style: normal;
+  }
+</style>
+
+<body>
+  <h1 id="check">
+    <center> Tag search </center>
+  </h1>
+  <div> <label></label> Tag : </label> <input id="tag"> </div> <br>
+  <div> <label></label> Filename : </label> <input id="filename"> </div> <br>
+  <div> <label></label> Filepath : </label> <input id="filepath"> </div> <br>
+  <div> <label></label> From + To : </label> <input id="from"> </div> <br>
+  <div> <button id="search"> Run </button> </div> <textarea class="container" id="myInput"></textarea><br /> <button onclick="myFunction()">Copy text</button>
+  <script src="index.js"> </script>
+</body>
+
+</html>
