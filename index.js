@@ -6,13 +6,9 @@ function myFunction() {
 	alert("Copied the text: " + copyText.value);
 }
 let tags;
-let filename;
-let filepath;
 let from;
 document.getElementById("search").onclick = function() {
 	tags = document.getElementById("tag").value;
-	filename = document.getElementById("filename").value;
-	filepath = document.getElementById("filepath").value;
 	from = document.getElementById("from").value;
 	const fromToArray = from.split("+");
 	const yourArray = tags.split("; ");
@@ -24,6 +20,6 @@ document.getElementById("search").onclick = function() {
 	}
 	const newString = list.join("\n");
 	const fromtostring = `<condition test="contains" flags="74"> <category> <name internal="LcRevitData_Element">Element</name> </category> <property> <name internal="LcRevitPropertyElementName">Name</name> </property> <value> <data type="wstring">${fromToArray[0]}</data> </value> </condition> <condition test="contains" flags="74"> <category> <name internal="LcRevitData_Element">Element</name> </category> <property> <name internal="LcRevitPropertyElementName">Name</name> </property> <value> <data type="wstring">${fromToArray[1]}</data> </value> </condition>`
-	const finalString = `<?xml version="1.0" encoding="UTF-8" ?> <exchange xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://download.autodesk.com/us/navisworks/schemas/nw-exchange-12.0.xsd" units="ft" filename="${filename}" filepath="${filepath}"> <findspec mode="all" disjoint="0"> <conditions>${newString}${fromtostring} </conditions> <locator>/</locator> </findspec> </exchange>`;
+	const finalString = `<?xml version="1.0" encoding="UTF-8" ?> <exchange xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://download.autodesk.com/us/navisworks/schemas/nw-exchange-12.0.xsd" units="ft" filename="" filepath=""> <findspec mode="all" disjoint="0"> <conditions>${newString}${fromtostring} </conditions> <locator>/</locator> </findspec> </exchange>`;
 	document.getElementById("myInput").textContent = `${finalString}`
 }
