@@ -19,7 +19,7 @@ document.getElementById("search").onclick = function() {
 		list.push(string1);
 	}
 	const newString = list.join("\n");
-	const fromtostring = `<condition test="contains" flags="74"> <category> <name internal="LcRevitData_Element">Element</name> </category> <property> <name internal="LcRevitPropertyElementName">Name</name> </property> <value> <data type="wstring">${fromToArray[0]}</data> </value> </condition> <condition test="contains" flags="74"> <category> <name internal="LcRevitData_Element">Element</name> </category> <property> <name internal="LcRevitPropertyElementName">Name</name> </property> <value> <data type="wstring">${fromToArray[1]}</data> </value> </condition>`
+	const fromtostring = `<condition test="contains" flags="74"> <category> <name internal="LcRevitData_Element">Element</name> </category> <property> <name internal="LcRevitPropertyElementName">Equipment Number</name> </property> <value> <data type="wstring">${fromToArray[0]}</data> </value> </condition> <condition test="contains" flags="74"> <category> <name internal="LcRevitData_Element">Element</name> </category> <property> <name internal="LcRevitPropertyElementName">Name</name> </property> <value> <data type="wstring">${fromToArray[1]}</data> </value> </condition>`
 	const finalString = `<?xml version="1.0" encoding="UTF-8" ?> <exchange xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://download.autodesk.com/us/navisworks/schemas/nw-exchange-12.0.xsd" units="ft" filename="" filepath=""> <findspec mode="all" disjoint="0"> <conditions>${newString}${fromtostring} </conditions> <locator>/</locator> </findspec> </exchange>`;
 	document.getElementById("myInput").textContent = `${finalString}`
 }
