@@ -15,7 +15,7 @@ document.getElementById("search").onclick = function() {
 	const count = yourArray.length;
 	const list = [];
 	for (let i = 0; i < count; i++) {
-		const string1 = `<condition test="contains" flags="74"> <category> <name internal="LcRevitData_Element">Element</name> </category> <property> <name internal="lcldrevit_parameter_Raceway Sequence ID_PG_IDENTITYDATA">Raceway Sequence ID</name> </property> <value> <data type="wstring">${yourArray[i]}</data> </value> </condition>`;
+		const string1 = `<condition test="contains" flags="74"> <category> <name internal="LcRevitData_Element">Custom</name> </category> <property> <name internal="lcldrevit_parameter_Raceway Sequence ID_PG_IDENTITYDATA">Raceway Sequence ID</name> </property> <value> <data type="wstring">${yourArray[i]}</data> </value> </condition>`;
 		list.push(string1);
 	}
 	const newString = list.join("\n");
